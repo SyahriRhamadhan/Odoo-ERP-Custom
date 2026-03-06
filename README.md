@@ -35,3 +35,46 @@ Developers can start with [the developer tutorials](https://www.odoo.com/documen
 
 If you believe you have found a security issue, check our [Responsible Disclosure page](https://www.odoo.com/security-report)
 for details and get in touch with us via email.
+
+## Local Setup (Windows)
+
+### Prerequisites
+
+- Python 3.12 installed and available as `py -3.12`
+- PostgreSQL running on `localhost:5432`
+- Database credentials
+
+### Create virtual environment
+
+```powershell
+py -3.12 -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip wheel
+pip install -r requirements.txt
+```
+
+### Configure database connection
+
+Update [debian/odoo.conf](debian/odoo.conf) with your PostgreSQL values.
+
+Example for:
+`DATABASE_URL="postgresql://postgres:123@localhost:5432/odoo-erp-manufacture?schema=public"`
+
+```ini
+[options]
+db_host = localhost
+db_port = 5432
+db_user = postgres
+db_password = 123
+db_name = odoo-erp-manufacture
+default_productivity_apps = True
+```
+
+### Run Odoo
+
+```powershell
+python odoo-bin -c debian/odoo.conf
+```
+
+Open: `http://localhost:8069`

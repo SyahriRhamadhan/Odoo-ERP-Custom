@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="landing_page_template" name="Arus Landing Page">
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Arus ERP Landing</title>
+                <script src="https://cdn.tailwindcss.com"></script>
+                <script>
+                    tailwind.config = {
+                        theme: {
+                            extend: {
+                                colors: {
+                                    arus: {
+                                        50: "#e7f7f4",
+                                        500: "#0f766e",
+                                        700: "#115e59"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </head>
+            <body class="min-h-screen bg-gradient-to-br from-arus-50 via-[#f7f4ee] to-[#f7f4ee] text-slate-800">
+                <main class="mx-auto max-w-6xl px-6 py-6 md:py-8">
+                    <nav class="flex items-center justify-between py-2">
+                        <div class="text-2xl font-bold tracking-tight text-arus-700">Arus ERP</div>
+                        <a href="/web/login" class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Login</a>
+                    </nav>
+
+                    <section class="mt-8 grid items-center gap-8 md:grid-cols-2">
+                        <div>
+                            <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
+                                Landing Page Gratis untuk Odoo Community
+                            </h1>
+                            <p class="mt-4 text-lg text-slate-600">
+                                Halaman ini custom module, tanpa lisensi Enterprise.
+                                Siap dipakai untuk profil bisnis dan call-to-action.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <a href="/web/login" class="rounded-xl bg-arus-500 px-5 py-3 font-semibold text-white hover:bg-arus-700">Masuk Odoo</a>
+                                <a href="#fitur" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 hover:bg-slate-50">Lihat Fitur</a>
+                            </div>
+                        </div>
+
+                        <aside class="rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                            <h3 class="text-xl font-bold">Kenapa versi ini cocok?</h3>
+                            <p class="mt-2 text-slate-600">
+                                Ringan, gratis, dan bisa dimodifikasi penuh oleh tim internal.
+                            </p>
+                            <div class="mt-4 grid grid-cols-3 gap-3">
+                                <div class="rounded-xl bg-slate-50 p-3 text-center">
+                                    <div class="text-xl font-bold text-arus-700">100%</div>
+                                    <div class="text-sm text-slate-600">Gratis</div>
+                                </div>
+                                <div class="rounded-xl bg-slate-50 p-3 text-center">
+                                    <div class="text-xl font-bold text-arus-700">1x</div>
+                                    <div class="text-sm text-slate-600">Install</div>
+                                </div>
+                                <div class="rounded-xl bg-slate-50 p-3 text-center">
+                                    <div class="text-xl font-bold text-arus-700">/landing</div>
+                                    <div class="text-sm text-slate-600">URL</div>
+                                </div>
+                            </div>
+                        </aside>
+                    </section>
+
+                    <section id="fitur" class="mt-12">
+                        <h2 class="text-2xl font-bold">Fitur Utama</h2>
+                        <div class="mt-4 grid gap-4 md:grid-cols-3">
+                            <article class="rounded-2xl border border-slate-200 bg-white p-5">
+                                <h4 class="font-semibold">Tanpa Website Builder</h4>
+                                <p class="mt-1 text-slate-600">Pakai route + template QWeb biasa.</p>
+                            </article>
+                            <article class="rounded-2xl border border-slate-200 bg-white p-5">
+                                <h4 class="font-semibold">Responsive</h4>
+                                <p class="mt-1 text-slate-600">Tampilan tetap rapi di desktop dan mobile.</p>
+                            </article>
+                            <article class="rounded-2xl border border-slate-200 bg-white p-5">
+                                <h4 class="font-semibold">Mudah Dikembangkan</h4>
+                                <p class="mt-1 text-slate-600">Bisa ditambah form lead, pricing, FAQ, dan kontak.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <footer class="mt-12 border-t border-slate-200 py-6 text-center text-sm text-slate-500">
+                        © Arus Digital - Odoo Community Landing
+                    </footer>
+                </main>
+            </body>
+        </html>
+    </template>
+</odoo>
+
