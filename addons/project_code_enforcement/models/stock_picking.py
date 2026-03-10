@@ -15,7 +15,7 @@ class StockPicking(models.Model):
         domain="[('company_id', 'in', [False, company_id])]",
     )
 
-    @api.constrains("state", "picking_type_code", "fabrication_project_id")
+    @api.constrains("state", "picking_type_id", "fabrication_project_id")
     def _check_fabrication_project_required(self):
         for picking in self:
             if (
